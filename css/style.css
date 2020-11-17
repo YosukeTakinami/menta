@@ -1,0 +1,608 @@
+@charset "UTF-8";
+/*
+    html5doctor.com Reset Stylesheet
+    v1.6.1
+    Last Updated: 2010-09-17
+    Author: Richard Clark - http://richclarkdesign.com
+    Twitter: @rich_clark
+    */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  /* プロジェクトによって変動 */
+  min-width: auto;
+  color: #000;
+  line-height: 1.6;
+  width: 100%;
+  font-variant-numeric: tabular-nums;
+  /* safari hover対策 */
+  -webkit-font-smoothing: antialiased;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+button {
+  line-height: 1.0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+p {
+  font-size: 30px;
+}
+
+body {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 16px;
+  color: #222222;
+  letter-spacing: 0.05em;
+}
+
+.bold {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  font-weight: bold;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+svg {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'renner';
+  src: url(../common/font/renner__400_book-webfont.woff);
+}
+
+@media (max-width: 768px) {
+  .isPc {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .isSp {
+    display: none !important;
+  }
+}
+
+/*
+    html5doctor.com Reset Stylesheet
+    v1.6.1
+    Last Updated: 2010-09-17
+    Author: Richard Clark - http://richclarkdesign.com
+    Twitter: @rich_clark
+    */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  /* プロジェクトによって変動 */
+  min-width: auto;
+  color: #000;
+  line-height: 1.6;
+  width: 100%;
+  font-variant-numeric: tabular-nums;
+  /* safari hover対策 */
+  -webkit-font-smoothing: antialiased;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+button {
+  line-height: 1.0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+body {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 16px;
+  color: #222222;
+  letter-spacing: 0.05em;
+}
+
+.bold {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  font-weight: bold;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+svg {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'renner';
+  src: url(../common/font/renner__400_book-webfont.woff);
+}
+
+.ttl {
+  font-size: 32px;
+  font-family: "renner";
+  font-weight: 500;
+}
+
+.wapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.news-l {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 80px;
+}
+
+.news-l li {
+  position: relative;
+  width: 30.6%;
+}
+
+.news-l li + li {
+  margin-left: 4%;
+}
+
+.news-l li figure {
+  height: 172px;
+}
+
+.news-l li figure img {
+  max-width: 306px;
+  height: 172px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.news-l div {
+  background: #ffffff;
+  padding: 30px 15px;
+}
+
+.news-l div p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+.news-l div .day {
+  font-size: 12px;
+  font-family: "renner";
+  margin-bottom: 0;
+}
+
+.news-l .category {
+  font-family: "renner";
+  color: #ffffff;
+  position: absolute;
+  top: 6%;
+  left: -15px;
+  background-color: #A8041E;
+  padding: 5px 10px;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+
+.btn {
+  max-width: 324px;
+  background-color: #A8041E;
+  position: relative;
+  z-index: 2;
+  display: block;
+  line-height: 0;
+  color: #fff;
+  text-align: center;
+  text-decoration: none !important;
+  font-family: "renner";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 70px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms linear;
+  transition: all 300ms linear;
+}
+
+.btn:hover {
+  color: #A8041E;
+}
+
+.btn:hover::before {
+  left: 0;
+}
+
+header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header h1 {
+  padding: 37px 0 0 35px;
+}
+
+header h1 img {
+  width: 200px;
+}
+
+@media screen and (max-width: 1000px) {
+  header h1 img {
+    width: 100%;
+  }
+}
+
+header .header-l {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header-l nav {
+  margin-right: 60px;
+}
+
+header .header-l nav li {
+  font-family: "renner";
+  display: inline-block;
+  font-size: 14px;
+  margin-right: 50px;
+}
+
+header .header-l nav li:last-child {
+  margin-right: 0;
+}
+
+header .header-l_btn {
+  display: inline-block;
+  padding: 35px 55px 32px 55px;
+  background-color: #000000;
+}
+
+header .header-l_btn span {
+  padding-right: 10px;
+}
+
+header .header-l_btn span img {
+  width: 13px;
+}
+
+header .header-l_btn dl {
+  color: #ffffff;
+  text-align: center;
+}
+
+header .header-l_btn dl dt {
+  font-family: "renner";
+  font-size: 16px;
+}
+
+header .header-l_btn dl dd {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.main {
+  position: relative;
+  margin-bottom: 10%;
+}
+
+@media screen and (min-width: 1280px) {
+  .main {
+    margin-bottom: 100px;
+  }
+}
+
+.main figure {
+  width: 80%;
+  margin-left: auto;
+}
+
+.main h2 {
+  position: absolute;
+  top: 40%;
+  left: 6.5%;
+  font-size: 5.625vw;
+  color: #000000;
+  font-family: "renner";
+}
+
+.main h2 span {
+  color: #ffffff;
+}
+
+.news {
+  position: relative;
+  margin-bottom: 28%;
+}
+
+@media screen and (min-width: 1280px) {
+  .news {
+    margin-bottom: 285px;
+  }
+}
+
+.news::before {
+  content: "";
+  background: #222222;
+  width: 100%;
+  height: 543px;
+  position: absolute;
+  top: 28%;
+  z-index: -1;
+}
+
+.news .ttl {
+  margin-bottom: 40px;
+}
+
+.about {
+  position: relative;
+}
+
+.about figure {
+  width: 90%;
+  margin-left: auto;
+  margin-bottom: 12%;
+}
+
+@media screen and (min-width: 1280px) {
+  .about figure {
+    margin-bottom: 120px;
+  }
+}
+
+.about_txt {
+  position: relative;
+  margin-bottom: 115px;
+}
+
+.about_txt::before {
+  content: "ABOUT US";
+  position: absolute;
+  font-size: 120px;
+  font-family: "renner";
+  color: #F5F5F5;
+  top: -58%;
+  right: -56px;
+  z-index: -1;
+}
+
+@media screen and (max-width: 1020px) {
+  .about_txt::before {
+    font-size: 12vw;
+    right: 0;
+    top: -30%;
+  }
+}
+
+.about_txt dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about_txt dl dt {
+  font-size: 32px;
+  font-weight: bold;
+  width: 392px;
+}
+
+.about_txt dl dd {
+  max-width: 44%;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,22 @@
+body{
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    font-size: 16px;
+    color: #222222;
+    letter-spacing: 0.05em;
+    }
+.bold{
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    font-weight: bold;
+    }
+img{
+    width: 100%;
+    max-width: 100%;
+    }
+svg {
+    margin: 0;
+    padding: 0;
+    }
+@font-face {
+    font-family: 'renner';
+    src: url(../common/font/renner__400_book-webfont.woff);
+}

@@ -1,0 +1,15 @@
+
+@import "vars";
+.is {
+    &Pc {
+        @media (max-width: $breakpoint - 1) {
+            display: none !important;
+        }
+    }
+
+    &Sp {
+        @media (min-width: $breakpoint) {
+            display: none !important;
+        }
+    }
+}
