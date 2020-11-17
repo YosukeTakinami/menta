@@ -651,44 +651,44 @@ header .header-l_btn dl dd {
   position: relative;
 }
 
-.bussiness_Area {
+.bussiness_Area_box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.bussiness_Area_txt {
+.bussiness_Area_box_txt {
   width: 35.9375vw;
   margin-right: 6.25vw;
   margin-top: 80px;
 }
 
 @media screen and (min-width: 1280px) {
-  .bussiness_Area_txt {
+  .bussiness_Area_box_txt {
     width: 460px;
   }
 }
 
-.bussiness_Area_txt dl {
+.bussiness_Area_box_txt dl {
   margin-bottom: 70px;
 }
 
-.bussiness_Area_txt dl dt {
+.bussiness_Area_box_txt dl dt {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 30px;
 }
 
-.bussiness_Area_txt dl dd {
+.bussiness_Area_box_txt dl dd {
   line-height: 2;
   letter-spacing: 0;
 }
 
-.bussiness_Area_txt .btn {
+.bussiness_Area_box_txt .btn {
   margin: 0;
 }
 
-.bussiness_Area figure {
+.bussiness_Area_box figure {
   position: absolute;
   right: 0;
   width: 49%;
@@ -699,14 +699,14 @@ header .header-l_btn dl dd {
 }
 
 @media screen and (min-width: 1280px) {
-  .bussiness_Area figure {
+  .bussiness_Area_box figure {
     padding-bottom: 0;
     height: 453px;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .bussiness_Area figure {
+  .bussiness_Area_box figure {
     width: 55%;
   }
 }

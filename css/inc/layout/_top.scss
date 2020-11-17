@@ -175,44 +175,46 @@ header{
 .bussiness{
     position: relative;
     &_Area{
-        display: flex;
-        &_txt{
-            width: (460/1280*100vw);
-            margin-right: (80/1280*100vw);
-            margin-top: 80px;
-            @media screen and (min-width: 1280px) {
-                width: 460px;
-            }
-            dl{
-                margin-bottom: 70px;
-                dt{
-                    font-size: 32px;
-                    font-weight: bold;
-                    margin-bottom: 30px;
+        &_box{
+            display: flex;
+            &_txt{
+                width: (460/1280*100vw);
+                margin-right: (80/1280*100vw);
+                margin-top: 80px;
+                @media screen and (min-width: 1280px) {
+                    width: 460px;
                 }
-                dd{
-                    line-height: 2;
-                    letter-spacing: 0;
+                dl{
+                    margin-bottom: 70px;
+                    dt{
+                        font-size: 32px;
+                        font-weight: bold;
+                        margin-bottom: 30px;
+                    }
+                    dd{
+                        line-height: 2;
+                        letter-spacing: 0;
+                    }
+                }
+                .btn{
+                    margin: 0;
                 }
             }
-            .btn{
-                margin: 0;
-            }
-        }
-        figure{
-            position: absolute;
-            right: 0;
-            width: 49%;
-            padding-bottom: 36%;
-            background-image: url(../../../img/bussiness@2x.jpg);
-            background-position: center;
-            background-size: cover;
-            @media screen and (min-width: 1280px) {
-                padding-bottom: 0;
-                height: 453px;
-            }
-            @media screen and (max-width: 1000px) {
-                width: 55%;
+            figure{
+                position: absolute;
+                right: 0;
+                width: 49%;
+                padding-bottom: 36%;
+                background-image: url(../../../img/bussiness@2x.jpg);
+                background-position: center;
+                background-size: cover;
+                @media screen and (min-width: 1280px) {
+                    padding-bottom: 0;
+                    height: 453px;
+                }
+                @media screen and (max-width: 1000px) {
+                    width: 55%;
+                }
             }
         }
     }
