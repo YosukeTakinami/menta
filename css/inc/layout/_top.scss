@@ -6,18 +6,54 @@ header{
     position: fixed;
     background-color:rgba(255,255,255,0.8);
     z-index: 999;
+    @media screen and (max-width: 1000px) {
+        height: 90px;
+    }
+    @include mqsp {
+        background-color:transparent;          
+    }
     h1{
         padding: 37px 0 0 35px;
+        @media screen and (max-width: 1000px) {
+            padding: 25px 0 0 30px;
+        }
         img{
             width: 200px;
             @media screen and (max-width: 1280px) {
                 width: (200/1280*100vw);
+            }
+            @media screen and (max-width: 1000px) {
+                width: 75%;
             }
         }
     }
     .header-l{
         display: flex;
         align-items: center;
+        @media screen and (max-width: 1000px) {
+            flex-direction: column;
+            position: fixed;
+            z-index: 88;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color:rgba(0,0,0,0.7);
+            color: #ffffff;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            visibility: hidden;
+            opacity: 0;
+            -webkit-transition: 0.5s ease-in-out;
+            transition: 0.5s ease-in-out;
+        }
         nav{
             margin-right: 60px;
             li{
@@ -27,6 +63,12 @@ header{
                 margin-right: 50px;
                 @media screen and (max-width: 1280px) {
                     margin-right: (50/1280*100vw);
+                }
+                @media screen and (max-width: 1000px) {
+                    display: block;
+                    font-size: 32px;
+                    margin-right: 0;
+                    margin-bottom: 30px;
                 }
                 &:last-child{
                     margin-right: 0;
@@ -57,6 +99,78 @@ header{
             }
         }
     }
+    .open .header-l{
+        visibility: visible;
+        opacity: 1;
+    }
+    #navbtn{
+        position: fixed;
+        z-index: 99;
+        top: 100px;
+        right: 3%;
+        padding: 0;
+        outline: none;
+        border: none;
+        background: none;
+        width: 40px;
+        height: 33px;
+        cursor: pointer;
+        display: none;
+        @media screen and (max-width: 1000px) {
+        right: 20px;
+        top: 8px;
+        display: block;
+        span{
+            display: block;
+            position: relative;
+            width: 40px;
+            height: 5px;
+            background-color:#1D1D1D;
+            transform: translateY(10px);
+            transition: 0.3s ease-in-out;
+            &:nth-of-type(2){
+                width: 30px;
+                right: -10px;
+                text-align: left;
+                top: 9px;
+            }
+            &:nth-of-type(3){
+                width: 20px;
+                right: -20px;
+                text-align: left;
+                top: 18px;
+            }
+        }
+        }
+    }
+}
+
+.open #navbtn{
+    z-index: 999999;
+    span{
+    top: 20px;
+    width: 40px;
+    transform: rotate(-45deg);
+    box-shadow: none;
+    background-color: #ffffff;
+        &:nth-of-type(2){
+            right: 0px;
+            top: 15px;
+            width: 40px;
+            transform: rotate(45deg);
+            box-shadow: none;
+            background-color: #ffffff;
+            }
+        &:nth-of-type(3){
+            opacity: 0;
+            transition: 0.3s;
+            }
+    }
+}
+
+.open .header-l{
+    visibility: visible;
+    opacity: 1;
 }
 
 // main-start
@@ -67,9 +181,20 @@ header{
     @media screen and (min-width: 1280px) {
         margin-bottom: 100px;
     }
+    @media screen and (max-width: 1000px) {
+        padding-top: 90px;
+    }
+    @include mqsp {
+        padding-top: 0;  
+        margin-bottom: 80px;  
+    }
     figure{
         width: 80%;
         margin-left: auto;
+        @include mqsp {
+            width: 100%;
+            margin-bottom: 45px;  
+        }
     }
     h2{
         position: absolute;
@@ -78,8 +203,15 @@ header{
         font-size: (72/1280*100vw);
         color: #000000;
         font-family: $enfont;
+        @include mqsp {
+            position: static;
+            padding: 0 20px;
+        }
         span{
             color: #ffffff;
+            @include mqsp {
+                color: #000000;
+            }
         }
     }
 }
@@ -91,6 +223,9 @@ header{
     @media screen and (min-width: 1280px) {
         margin-bottom: 285px;
     }
+    @include mqsp {
+        margin-bottom: 40px;          
+    }
     &::before{
         content: "";
         background: #222222;
@@ -99,9 +234,16 @@ header{
         position: absolute;
         top: 28%;
         z-index: -1;
+        @include mqsp {
+            height: 455px; 
+            top: 20%;     
+        }
     }
     .ttl{
         margin-bottom: 40px;
+        @include mqsp {
+            margin-bottom: 20px;        
+        }
     }
 }
 
@@ -115,6 +257,9 @@ header{
         margin-bottom: 12%;
         @media screen and (min-width: 1280px) {
             margin-bottom: 120px;
+        }
+        @include mqsp {
+            width: 100%;          
         }
     }
     &_txt{
@@ -139,27 +284,51 @@ header{
         dl{
             display: flex;
             justify-content: space-between;
+            @include mqsp {
+                flex-direction: column;     
+            }
             dt{
                 font-size: 32px;
                 font-weight: bold;
                 width: 392px;
+                @include mqsp {
+                    width: 100%;   
+                    margin-bottom: 30px;    
+                }
             }
             dd{
                 max-width: 44%;
+                font-size: 16px;
+                @include mqsp {
+                    max-width: 100%;      
+                }
             }
         }
     }
     ul{
         display: flex;
         justify-content: space-between;
+        @include mqsp {
+            flex-direction: column;   
+        }
         li{
             max-width: 324px;
+            @include mqsp {
+                width: 100%;
+                margin: 0 auto 50px;
+                max-width: 100%;        
+            }
             figure{
                 margin-left: 0;
                 margin-bottom: 10px;
+                width: 90%;
+                margin: 0 auto;
             }
             dl{
                 margin-bottom: 10px;
+                @include mqsp {
+                    margin-bottom: 40px;       
+                }
                 dt{
                     font-size: 32px;
                     font-family: $enfont;
@@ -189,6 +358,9 @@ header{
         height: 100%;
         background: #E4E4E4;
         z-index: -1;
+        @include mqsp {
+            width: 100%;       
+        }
     }
     figure{
         position: absolute;
@@ -196,7 +368,7 @@ header{
         top: 150px;
         width: 49%;
         padding-bottom: 36%;
-        background-image: url(../../../img/bussiness@2x.jpg);
+        background-image: url(../img/bussiness@2x.jpg);
         background-position: center;
         background-size: cover;
         z-index: 2;
@@ -207,12 +379,21 @@ header{
         @media screen and (max-width: 1000px) {
             width: 55%;
         }
+        @include mqsp {
+            position: static;
+            width: 95%;
+            margin: 0 auto; 
+            padding-bottom: 55%;    
+        }
     }
     &_Area{
         position: relative;
         padding: 150px 20px;
         max-width: 1150px;
         margin: 0 auto;
+        @include mqsp {
+            padding: 60px 20px;       
+        }
         h2{
             font-size: 120px;
             color: #D1D1D1;
@@ -236,6 +417,11 @@ header{
                 @media screen and (min-width: 1280px) {
                     width: 460px;
                 }
+                @include mqsp {
+                    width: 100%;
+                    margin-right: 0;
+                    padding-top: 0;    
+                }
                 dl{
                     margin-bottom: 70px;
                     dt{
@@ -250,6 +436,9 @@ header{
                 }
                 .btn{
                     margin: 0;
+                    @include mqsp {
+                        margin: 0 auto;      
+                    }
                 }
             }
         }

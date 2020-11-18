@@ -10,9 +10,14 @@
 <body>
     <header>
         <h1><img src="img/logo.svg" alt=""></h1>
+        <button type="button" id="navbtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <div class="header-l">
             <nav>
-                <ul>
+                <ul id="navlist">
                     <li>NEWS</li><li>ABOUT US</li><li>BUSSINESS</li><li>COMPANY</li><li>RECRUIT</li>
                 </ul>
             </nav>
@@ -25,7 +30,8 @@
         </div>
     </header>
     <section class="main">
-        <figure><img src="img/main.jpg" alt=""></figure>
+        <figure class="isPc"><img src="img/main.jpg" srcset="img/main.jpg 1x, img/main@2x.jpg 2x" alt=""></figure>
+        <figure class="isSp"><img src="img/main-sp.jpg" srcset="img/main-sp.jpg 1x, img/main-sp@2x.jpg 2x" alt=""></figure>
         <h2>New <span>Technology</span><br>
             for H<span>uman</span></h2>
     </section>
@@ -48,7 +54,7 @@
                     <p class="day">DATE: 2019.0.00</p>
                 </div>
             </li>
-            <li>
+            <li class="isPc">
                 <p class="category">PRESS</p>
                 <figure><img src="img/news-03.jpg" alt=""></figure>
                 <div>
@@ -62,10 +68,9 @@
     <section class="about">
         <figure><img src="img/about-img.jpg" srcset="img/about-img.jpg 1x, img/about-img@2x.jpg 2x" alt=""></figure>
         <div class="about_txt wapper">
-            <h2>ABOUT US</h2>
+            <h2 class="isPc">ABOUT US</h2>
             <dl>
-                <dt>人のためのデジタル技術を<br>
-                    この先もずっと</dt>
+                <dt>人のためのデジタル技術を<br class="isPc">この先もずっと</dt>
                 <dd>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
                     ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</dd>
             </dl>
@@ -77,7 +82,7 @@
                     <dd>デジタルマーケティング</dd>
                 </dl>
                 <figure><img src="img/marketing.jpg" srcset="img/marketing.jpg 1x, img/marketing@2x.jpg 2x" alt=""></figure>
-                <p>ここにテキストが入ります、<br>
+                <p class="isPc">ここにテキストが入ります、<br>
                     ここにテキスト。</p>
             </li>
             <li>
@@ -86,7 +91,7 @@
                     <dd>ブランド戦略</dd>
                 </dl>
                 <figure><img src="img/strategy.jpg" srcset="img/strategy.jpg 1x, img/strategy@2x.jpg 2x" alt=""></figure>
-                <p>ここにテキストが入ります、<br>
+                <p class="isPc">ここにテキストが入ります、<br>
                     ここにテキスト。</p>
             </li>
             <li>
@@ -95,14 +100,14 @@
                     <dd>プロモーションの一貫性</dd>
                 </dl>
                 <figure><img src="img/promotion.jpg" srcset="img/promotion.jpg 1x, img/promotion@2x.jpg 2x" alt=""></figure>
-                <p>ここにテキストが入ります、<br>
+                <p class="isPc">ここにテキストが入ります、<br>
                     ここにテキスト。</p>
             </li> 
         </ul>
     </section>
     <section class="bussiness">
         <div class="bussiness_Area">
-            <h2>BUSSINESS</h2>
+            <h2 class="isPc">BUSSINESS</h2>
             <div class="bussiness_Area_box">
                 <div class="bussiness_Area_box_txt">
                     <dl>

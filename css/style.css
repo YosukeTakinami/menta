@@ -130,6 +130,12 @@ body {
   letter-spacing: 0.05em;
 }
 
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+}
+
 .bold {
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
   font-weight: bold;
@@ -289,6 +295,12 @@ body {
   letter-spacing: 0.05em;
 }
 
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+}
+
 .bold {
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
   font-weight: bold;
@@ -315,6 +327,12 @@ svg {
   font-weight: 500;
 }
 
+@media screen and (max-width: 768px) {
+  .ttl {
+    font-size: 24px;
+  }
+}
+
 .wapper {
   max-width: 1000px;
   margin: 0 auto;
@@ -328,9 +346,21 @@ svg {
   margin-bottom: 80px;
 }
 
+@media screen and (max-width: 768px) {
+  .news-l {
+    margin-bottom: 65px;
+  }
+}
+
 .news-l li {
   position: relative;
   width: 30.6%;
+}
+
+@media screen and (max-width: 768px) {
+  .news-l li {
+    width: 50%;
+  }
 }
 
 .news-l li + li {
@@ -348,6 +378,12 @@ svg {
      object-fit: cover;
 }
 
+@media screen and (max-width: 768px) {
+  .news-l li figure img {
+    max-width: 100%;
+  }
+}
+
 .news-l div {
   background: #ffffff;
   padding: 30px 15px;
@@ -357,6 +393,12 @@ svg {
   font-size: 16px;
   margin-bottom: 30px;
   line-height: 1.8;
+}
+
+@media screen and (max-width: 768px) {
+  .news-l div p {
+    font-size: 12px;
+  }
 }
 
 .news-l div .day {
@@ -395,6 +437,13 @@ svg {
   overflow: hidden;
 }
 
+@media screen and (max-width: 768px) {
+  .btn {
+    max-width: 100%;
+    width: 95%;
+  }
+}
+
 .btn::before {
   content: '';
   position: absolute;
@@ -429,8 +478,26 @@ header {
   z-index: 999;
 }
 
+@media screen and (max-width: 1000px) {
+  header {
+    height: 90px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    background-color: transparent;
+  }
+}
+
 header h1 {
   padding: 37px 0 0 35px;
+}
+
+@media screen and (max-width: 1000px) {
+  header h1 {
+    padding: 25px 0 0 30px;
+  }
 }
 
 header h1 img {
@@ -443,6 +510,12 @@ header h1 img {
   }
 }
 
+@media screen and (max-width: 1000px) {
+  header h1 img {
+    width: 75%;
+  }
+}
+
 header .header-l {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -450,6 +523,36 @@ header .header-l {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+  header .header-l {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: fixed;
+    z-index: 88;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+  }
 }
 
 header .header-l nav {
@@ -466,6 +569,15 @@ header .header-l nav li {
 @media screen and (max-width: 1280px) {
   header .header-l nav li {
     margin-right: 3.90625vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  header .header-l nav li {
+    display: block;
+    font-size: 32px;
+    margin-right: 0;
+    margin-bottom: 30px;
   }
 }
 
@@ -502,6 +614,93 @@ header .header-l_btn dl dd {
   font-weight: bold;
 }
 
+header .open .header-l {
+  visibility: visible;
+  opacity: 1;
+}
+
+header #navbtn {
+  position: fixed;
+  z-index: 99;
+  top: 100px;
+  right: 3%;
+  padding: 0;
+  outline: none;
+  border: none;
+  background: none;
+  width: 40px;
+  height: 33px;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  header #navbtn {
+    right: 20px;
+    top: 8px;
+    display: block;
+  }
+  header #navbtn span {
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 5px;
+    background-color: #1D1D1D;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+  header #navbtn span:nth-of-type(2) {
+    width: 30px;
+    right: -10px;
+    text-align: left;
+    top: 9px;
+  }
+  header #navbtn span:nth-of-type(3) {
+    width: 20px;
+    right: -20px;
+    text-align: left;
+    top: 18px;
+  }
+}
+
+.open #navbtn {
+  z-index: 999999;
+}
+
+.open #navbtn span {
+  top: 20px;
+  width: 40px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #ffffff;
+}
+
+.open #navbtn span:nth-of-type(2) {
+  right: 0px;
+  top: 15px;
+  width: 40px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #ffffff;
+}
+
+.open #navbtn span:nth-of-type(3) {
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.open .header-l {
+  visibility: visible;
+  opacity: 1;
+}
+
 .main {
   position: relative;
   margin-bottom: 10%;
@@ -514,9 +713,29 @@ header .header-l_btn dl dd {
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .main {
+    padding-top: 90px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    padding-top: 0;
+    margin-bottom: 80px;
+  }
+}
+
 .main figure {
   width: 80%;
   margin-left: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .main figure {
+    width: 100%;
+    margin-bottom: 45px;
+  }
 }
 
 .main h2 {
@@ -528,8 +747,21 @@ header .header-l_btn dl dd {
   font-family: "renner";
 }
 
+@media screen and (max-width: 768px) {
+  .main h2 {
+    position: static;
+    padding: 0 20px;
+  }
+}
+
 .main h2 span {
   color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .main h2 span {
+    color: #000000;
+  }
 }
 
 .news {
@@ -543,6 +775,12 @@ header .header-l_btn dl dd {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .news {
+    margin-bottom: 40px;
+  }
+}
+
 .news::before {
   content: "";
   background: #222222;
@@ -553,8 +791,21 @@ header .header-l_btn dl dd {
   z-index: -1;
 }
 
+@media screen and (max-width: 768px) {
+  .news::before {
+    height: 455px;
+    top: 20%;
+  }
+}
+
 .news .ttl {
   margin-bottom: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .news .ttl {
+    margin-bottom: 20px;
+  }
 }
 
 .about {
@@ -571,6 +822,12 @@ header .header-l_btn dl dd {
 @media screen and (min-width: 1280px) {
   .about figure {
     margin-bottom: 120px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about figure {
+    width: 100%;
   }
 }
 
@@ -608,14 +865,37 @@ header .header-l_btn dl dd {
           justify-content: space-between;
 }
 
+@media screen and (max-width: 768px) {
+  .about_txt dl {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .about_txt dl dt {
   font-size: 32px;
   font-weight: bold;
   width: 392px;
 }
 
+@media screen and (max-width: 768px) {
+  .about_txt dl dt {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
 .about_txt dl dd {
   max-width: 44%;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .about_txt dl dd {
+    max-width: 100%;
+  }
 }
 
 .about ul {
@@ -627,17 +907,42 @@ header .header-l_btn dl dd {
           justify-content: space-between;
 }
 
+@media screen and (max-width: 768px) {
+  .about ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .about ul li {
   max-width: 324px;
+}
+
+@media screen and (max-width: 768px) {
+  .about ul li {
+    width: 100%;
+    margin: 0 auto 50px;
+    max-width: 100%;
+  }
 }
 
 .about ul li figure {
   margin-left: 0;
   margin-bottom: 10px;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .about ul li dl {
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .about ul li dl {
+    margin-bottom: 40px;
+  }
 }
 
 .about ul li dl dt {
@@ -670,13 +975,19 @@ header .header-l_btn dl dd {
   z-index: -1;
 }
 
+@media screen and (max-width: 768px) {
+  .bussiness::before {
+    width: 100%;
+  }
+}
+
 .bussiness figure {
   position: absolute;
   right: 0;
   top: 150px;
   width: 49%;
   padding-bottom: 36%;
-  background-image: url(../../../img/bussiness@2x.jpg);
+  background-image: url(../img/bussiness@2x.jpg);
   background-position: center;
   background-size: cover;
   z-index: 2;
@@ -695,11 +1006,26 @@ header .header-l_btn dl dd {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .bussiness figure {
+    position: static;
+    width: 95%;
+    margin: 0 auto;
+    padding-bottom: 55%;
+  }
+}
+
 .bussiness_Area {
   position: relative;
   padding: 150px 20px;
   max-width: 1150px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .bussiness_Area {
+    padding: 60px 20px;
+  }
 }
 
 .bussiness_Area h2 {
@@ -738,6 +1064,14 @@ header .header-l_btn dl dd {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .bussiness_Area_box_txt {
+    width: 100%;
+    margin-right: 0;
+    padding-top: 0;
+  }
+}
+
 .bussiness_Area_box_txt dl {
   margin-bottom: 70px;
 }
@@ -755,6 +1089,12 @@ header .header-l_btn dl dd {
 
 .bussiness_Area_box_txt .btn {
   margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .bussiness_Area_box_txt .btn {
+    margin: 0 auto;
+  }
 }
 
 .future_Area {

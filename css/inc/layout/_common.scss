@@ -2,6 +2,9 @@
     font-size: 32px;
     font-family: $enfont;
     font-weight: 500;
+    @include mqsp {
+        font-size: 24px;
+    }
 }
 
 .wapper{
@@ -14,9 +17,15 @@
 .news-l{
     display: flex;
     margin-bottom: 80px;
+    @include mqsp {
+        margin-bottom: 65px;          
+    }
         li{
             position: relative;
             width: 30.6%;
+            @include mqsp {
+                width: 50%;
+            }
             + li{
                 margin-left: 4%;
             }
@@ -26,6 +35,9 @@
                     max-width: 306px;
                     height: 172px;
                     object-fit: cover; 
+                    @include mqsp {
+                        max-width: 100%;   
+                    }
                 }
             }
         }
@@ -36,6 +48,9 @@
                 font-size: 16px;
                 margin-bottom: 30px;
                 line-height: 1.8;
+                @include mqsp {
+                    font-size: 12px;          
+                }
             }
             .day{
                 font-size: 12px;
@@ -72,6 +87,10 @@
     line-height: 70px;
     margin: 0 auto;
     overflow: hidden;
+    @include mqsp {
+        max-width: 100%;
+        width: 95%;
+    }
     &::before{
         content: '';
         position: absolute;

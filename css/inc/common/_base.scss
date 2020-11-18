@@ -3,6 +3,9 @@ body{
     font-size: 16px;
     color: #222222;
     letter-spacing: 0.05em;
+    @include mqsp {
+        font-size: 12px;          
+    }
     }
 .bold{
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
