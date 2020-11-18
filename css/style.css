@@ -424,6 +424,9 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 999;
 }
 
 header h1 {
@@ -434,9 +437,9 @@ header h1 img {
   width: 200px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1280px) {
   header h1 img {
-    width: 100%;
+    width: 15.625vw;
   }
 }
 
@@ -458,6 +461,12 @@ header .header-l nav li {
   display: inline-block;
   font-size: 14px;
   margin-right: 50px;
+}
+
+@media screen and (max-width: 1280px) {
+  header .header-l nav li {
+    margin-right: 3.90625vw;
+  }
 }
 
 header .header-l nav li:last-child {
@@ -496,6 +505,7 @@ header .header-l_btn dl dd {
 .main {
   position: relative;
   margin-bottom: 10%;
+  padding-top: 111px;
 }
 
 @media screen and (min-width: 1280px) {
@@ -654,7 +664,7 @@ header .header-l_btn dl dd {
 .bussiness::before {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 90%;
   height: 100%;
   background: #E4E4E4;
   z-index: -1;
@@ -745,5 +755,88 @@ header .header-l_btn dl dd {
 
 .bussiness_Area_box_txt .btn {
   margin: 0;
+}
+
+.future_Area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.future_Area_link {
+  width: 37%;
+  margin-right: 90px;
+}
+
+@media screen and (max-width: 1000px) {
+  .future_Area_link {
+    margin-right: 7vw;
+  }
+}
+
+.future_Area_link h2 {
+  font-size: 24px;
+  font-family: "renner";
+  letter-spacing: 0.15em;
+  width: 100%;
+  padding: 18% 0;
+  text-align: center;
+  background-image: url(../img/company.jpg);
+  background-size: cover;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 1000px) {
+  .future_Area_link h2 {
+    height: 50px;
+  }
+}
+
+.future_Area_link h2:last-child {
+  background-image: url(../img/recruit.jpg);
+}
+
+.future_Area_txt {
+  max-width: 470px;
+  padding: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  .future_Area_txt {
+    width: 47vw;
+  }
+}
+
+.future_Area_txt dt {
+  font-size: 42px;
+  font-family: "renner";
+  letter-spacing: 0.05em;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1000px) {
+  .future_Area_txt dt {
+    margin-bottom: 2vw;
+  }
+}
+
+.future_Area_txt dd {
+  line-height: 1.8;
+}
+
+footer {
+  padding: 85px 0 85px 130px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  background: #A8041E;
+}
+
+footer h2 {
+  width: 200px;
+  line-height: 0;
 }
 /*# sourceMappingURL=style.css.map */

@@ -3,12 +3,15 @@ header{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    background-color:rgba(255,255,255,0.8);
+    z-index: 999;
     h1{
         padding: 37px 0 0 35px;
         img{
             width: 200px;
-            @media screen and (max-width: 1000px) {
-                width: 100%;
+            @media screen and (max-width: 1280px) {
+                width: (200/1280*100vw);
             }
         }
     }
@@ -22,6 +25,9 @@ header{
                 display: inline-block;
                 font-size: 14px;
                 margin-right: 50px;
+                @media screen and (max-width: 1280px) {
+                    margin-right: (50/1280*100vw);
+                }
                 &:last-child{
                     margin-right: 0;
                 }
@@ -57,6 +63,7 @@ header{
 .main{
     position: relative;
     margin-bottom: 10%;
+    padding-top: 111px;
     @media screen and (min-width: 1280px) {
         margin-bottom: 100px;
     }
@@ -178,7 +185,7 @@ header{
     &::before{
         content: "";
         position: absolute;
-        width: 100%;
+        width: 90%;
         height: 100%;
         background: #E4E4E4;
         z-index: -1;
@@ -246,5 +253,66 @@ header{
                 }
             }
         }
+    }
+}
+.future{
+    &_Area{
+        display: flex;
+        align-items: center;
+        &_link{
+            width: 37%;
+            margin-right: 90px;
+            @media screen and (max-width: 1000px) {
+                margin-right: (70/1000*100vw);
+            }
+            h2{
+                font-size: 24px;
+                font-family: $enfont;
+                letter-spacing: 0.15em;
+                width: 100%;
+                padding: 18% 0;
+                text-align: center;
+                background-image: url(../img/company.jpg);
+                background-size: cover;
+                color: #ffffff;
+                @media screen and (max-width: 1000px) {
+                    height: 50px;
+                }
+                &:last-child{
+                    background-image: url(../img/recruit.jpg);
+                }
+            }
+        }
+        &_txt{
+            max-width: 470px;
+            padding: 20px;
+            @media screen and (max-width: 1000px) {
+                width: (470/1000*100vw);
+            }
+            dt{
+                font-size: 42px;
+                font-family: $enfont;
+                letter-spacing: 0.05em;
+                margin-bottom: 30px;
+                @media screen and (max-width: 1000px) {
+                    margin-bottom: (20/1000*100vw);
+                }
+            }
+            dd{
+                line-height: 1.8;
+            }
+        }
+    }
+}
+
+// footer
+footer{
+    padding: 85px 0 85px 130px;
+    box-sizing: border-box;
+    width: 100%;
+    background: #A8041E;
+    h2{
+        width: 200px;
+        line-height: 0;
     }
 }
