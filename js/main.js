@@ -13,10 +13,13 @@ function equalHeight(elements) {
 
     equalHeight('.news-height');
 
-    
 document.getElementById("navbtn").onclick = function(){
     document.querySelector('html').classList.toggle('open');
     document.getElementById("navlist").onclick = function(){
     document.querySelector('html').classList.toggle('open');
     }
 }
+
+
+AOS.init({
+});

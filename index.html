@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://indestructibletype-fonthosting.github.io/renner.css" type="text/css" charset="utf-8" />
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -16,61 +17,70 @@
             <span></span>
         </button>
         <div class="header-l">
-            <nav>
+            <nav><a href="#"></a>
                 <ul id="navlist">
-                    <li>NEWS</li><li>ABOUT US</li><li>BUSSINESS</li><li>COMPANY</li><li>RECRUIT</li>
+                    <li><a href="#">NEWS</a></li><li><a href="#">ABOUT US</a></li><li><a href="#">BUSSINESS</a></li><li><a href="#">COMPANY</a></li><li><a href="#">RECRUIT</a></li>
                 </ul>
             </nav>
-            <div class="header-l_btn">
+            <a href="#" class="header-l_btn">
+                <div class="waku"></div>
                 <dl>
                     <dt><span><img src="img/dl.svg" alt=""></span>DOWNLOAD</dt>
                     <dd>会社案内ダウンロード</dd>
                 </dl>
-            </div>
+            </a>
         </div>
     </header>
     <section class="main">
         <figure class="isPc"><img src="img/main.jpg" srcset="img/main.jpg 1x, img/main@2x.jpg 2x" alt=""></figure>
         <figure class="isSp"><img src="img/main-sp.jpg" srcset="img/main-sp.jpg 1x, img/main-sp@2x.jpg 2x" alt=""></figure>
-        <h2>New <span>Technology</span><br>
+        <h2 data-aos="fade-up">New <span>Technology</span><br>
             for H<span>uman</span></h2>
+        <div class="main_scroll isPc">
+            <p class="main_scroll_txt">SCROAL</p>
+            <div class="main_scroll_bar"></div>
+            <div class="main_scroll_bar02"></div>
+        </div>
     </section>
     <section class="news">
-        <h2 class="ttl wapper">NEWS</h2>
+        <h2 class="ttl wapper" data-aos="fade-up">NEWS</h2>
         <ul class="news-l wapper">
-            <li>
+            <li><a href="">
                 <p class="category">PRESS</p>
                 <figure><img src="img/news-01.jpg" alt=""></figure>
                 <div>
                     <p class="news-height">DEGITAL Tokyo 5月7日（火）〜5月10日（金）まで臨時休業とさせて頂きます。</p>
                     <p class="day">DATE: 2019.0.00</p>
-                </div>
+                </div></a>
             </li>
-            <li>
+            <li><a href="">
                 <p class="category">PRESS</p>
                 <figure><img src="img/news-02.jpg" alt=""></figure>
                 <div>
                     <p class="news-height">D「VR 体験会」予約開始！。</p>
                     <p class="day">DATE: 2019.0.00</p>
-                </div>
+                </div></a>
             </li>
-            <li class="isPc">
+            <li class="isPc"><a href="">
                 <p class="category">PRESS</p>
                 <figure><img src="img/news-03.jpg" alt=""></figure>
                 <div>
                     <p class="news-height">DEGITAL Tokyo 5月7日（火）〜5月10日（金）まで臨時休業とさせて頂きます。</p>
                     <p class="day">DATE: 2019.0.00</p>
-                </div>
+                </div></a>
             </li>
         </ul>
-        <a class="btn" href="#">NEWS LIST</a>
+        <div class="btnArea">
+            <div class="waku"></div>
+            <a class="btn" href="#">NEWS LIST</a>
+        </div>
     </section>
     <section class="about">
         <figure><img src="img/about-img.jpg" srcset="img/about-img.jpg 1x, img/about-img@2x.jpg 2x" alt=""></figure>
         <div class="about_txt wapper">
             <h2 class="isPc">ABOUT US</h2>
             <dl>
-                <dt>人のためのデジタル技術を<br class="isPc">この先もずっと</dt>
+                <dt data-aos="fade-up">人のためのデジタル技術を<br class="isPc">この先もずっと</dt>
                 <dd>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
                     ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</dd>
             </dl>
@@ -111,25 +121,29 @@
             <div class="bussiness_Area_box">
                 <div class="bussiness_Area_box_txt">
                     <dl>
-                        <dt>ひとりでも多くの人に<br>
+                        <dt data-aos="fade-up">ひとりでも多くの人に<br>
                             笑顔になってもらうために。</dt>
                         <dd>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
                             ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</dd>
                     </dl>
-                    <a class="btn" href="#">NEWS LIST</a>
+                    <figure class="isSp"></figure>
+                    <div class="btnArea">
+                        <div class="waku"></div>
+                        <a class="btn btn02" href="#">NEWS LIST</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <figure></figure>
+        <figure class="isPc"></figure>
     </section>
     <section class="future">
         <div class="future_Area">
             <div class="future_Area_link">
-                <h2>Companyimg</h2>
-                <h2>Recruit</h2>
+                <h2><a href="">Company</a></h2>
+                <h2><a href="">Recruit</a></h2>
             </div>
             <dl class="future_Area_txt">
-                <dt>Future is “WOW”</dt>
+                <dt data-aos="fade-up">Future is “WOW”</dt>
                 <dd>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
                     ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</dd>
             </dl>
@@ -139,5 +153,17 @@
         <h2><img src="img/footer-logo.svg" alt=""></h2>
     </footer>
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+        offset: 120,
+        delay: 600,
+        duration: 300,
+        easing: 'ease',
+        once: false,
+        mirror: false,
+        anchorPlacement: 'top-bottom',
+    });
+    </script>
 </body>
 </html>
