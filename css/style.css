@@ -384,6 +384,8 @@ svg {
   height: 172px;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: 1s all;
+  transition: 1s all;
 }
 
 .news-l li figure img:hover {
@@ -1044,7 +1046,7 @@ header #navbtn {
 }
 
 .about figure {
-  width: 90%;
+  width: 100%;
   margin-left: auto;
   margin-bottom: 12%;
 }
@@ -1322,7 +1324,10 @@ header #navbtn {
 .bussiness_Area_box_txt dl dt {
   font-size: 32px;
   font-weight: bold;
-  margin-bottom: 30px;
+}
+
+.bussiness_Area_box_txt dl dt:nth-child(2) {
+  margin-bottom: 20px;
 }
 
 .bussiness_Area_box_txt dl dd {

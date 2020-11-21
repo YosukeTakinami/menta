@@ -343,7 +343,7 @@ header{
         margin-bottom: 90px;   
     }
     figure{
-        width: 90%;
+        width: 100%;
         margin-left: auto;
         margin-bottom: 12%;
         @media screen and (min-width: 1280px) {
@@ -525,7 +525,9 @@ header{
                     dt{
                         font-size: 32px;
                         font-weight: bold;
-                        margin-bottom: 30px;
+                        &:nth-child(2){
+                            margin-bottom: 20px;
+                        }
                     }
                     dd{
                         line-height: 2;
