@@ -37,8 +37,7 @@
                 }
                 img{
                     height: 172px;
-                    object-fit: cover;
-                    transition: 1s all;
+                    object-fit: cover; 
                     &:hover{
                         transition: 1s all;
                         transform: scale(1.2, 1.2);
@@ -181,8 +180,8 @@
         }
         p{
             @include mqsp {
-                font-size: 14px;
-                text-align: center;
+               font-size: 14px;
+               text-align: center;
             }
         }
     }
