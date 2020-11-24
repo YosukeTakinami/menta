@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <h1><img src="../../img/logo.svg" alt=""></h1>
+        <h1><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../../img/logo.svg" alt=""></h1>
         <button type="button" id="navbtn">
             <span></span>
             <span></span>
@@ -25,7 +25,7 @@
             <a href="#" class="header-l_btn">
                 <div class="waku"></div>
                 <dl>
-                    <dt><span><img src="../img/dl.svg" alt=""></span>DOWNLOAD</dt>
+                    <dt><span><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../img/dl.svg" alt=""></span>DOWNLOAD</dt>
                     <dd>会社案内ダウンロード</dd>
                 </dl>
             </a>
@@ -49,12 +49,12 @@
             </div>
         </div>
         <h2>タイトル h1タイトル h1タイトル h1タイトル h1タイトル h1タイトル h1タイトル h1タイトル h1タイトル h1タイトル h1タイトル h1</h2>
-        <figure><img src="../../img/news-detail.jpg" alt=""></figure>
+        <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../../img/news-detail.jpg" alt=""></figure>
         <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテ<br>
         <br>
         キストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
         <dl class="page-newsContents_table">
-            <dt><span><img src="../../img/table-icon.svg" alt=""></span>目次</dt>
+            <dt><span><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../../img/table-icon.svg" alt=""></span>目次</dt>
             <dd>あああああああ</dd>
             <dd>あああああああ</dd>
             <dd>あああああああ</dd>
@@ -75,7 +75,7 @@
         <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテ<br>
         <br>
         キストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-        <figure class="img02"><img src="../../img/news-detail02.jpg" alt=""></figure>
+        <figure class="img02"><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../../img/news-detail02.jpg" alt=""></figure>
         <ul class="listArea">
             <li>ああああああああああああああああああああああああああああああああああああ</li>
             <li>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</li>
@@ -99,7 +99,7 @@
                 <li>♯AAA</li><li>♯BBBB</li><li>♯CCCC</li>
             </ul>
             <div class="page-newsContents_sns_Area">
-                <figure><img src="../../img/news-sns.jpg" alt=""></figure>
+                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../../img/news-sns.jpg" alt=""></figure>
                 <div class="page-newsContents_sns_Area_link">
                     <a href=""><dl>
                         <dt><i class="fab fa-facebook-f"></i>Facebook</dt>
@@ -130,10 +130,10 @@
                 </dl></a>
             </div>
         </div>
-        <p class="listBtn"><a href="#">BACK TO LIST<span><img src="../../img/list.svg" alt=""></span></a></p>
+        <p class="listBtn"><a href="#">BACK TO LIST<span><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../../img/list.svg" alt=""></span></a></p>
     </section>
     <footer>
-        <h2><img src="../../img/footer-logo.svg" alt=""></h2>
+        <h2><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../../img/footer-logo.svg" alt=""></h2>
     </footer>
 </body>
 </html>

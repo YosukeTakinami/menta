@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1><img src="../img/logo.svg" alt=""></h1>
+        <h1><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../img/logo.svg" alt=""></h1>
         <button type="button" id="navbtn">
             <span></span>
             <span></span>
@@ -24,7 +24,7 @@
             <a href="#" class="header-l_btn">
                 <div class="waku"></div>
                 <dl>
-                    <dt><span><img src="../img/dl.svg" alt=""></span>DOWNLOAD</dt>
+                    <dt><span><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../img/dl.svg" alt=""></span>DOWNLOAD</dt>
                     <dd>会社案内ダウンロード</dd>
                 </dl>
             </a>
@@ -38,7 +38,7 @@
     </section>
     <section class="newsCategory wapper">
         <div class="newsCategory_Area">
-            <p><span><img src="../img/cate-icon.svg" alt=""></span>CATEGORY</p>
+            <p><span><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../img/cate-icon.svg" alt=""></span>CATEGORY</p>
             <ul>
                 <li><a href="">ALL</a></li>
                 <li><a href="">PRESS</a></li>
@@ -54,7 +54,7 @@
         <ul class="news-l wapper">
             <li><a href="">
                 <p class="category">PRESS</p>
-                <figure><img src="../img/news-01.jpg" alt=""></figure>
+                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../img/news-01.jpg" alt=""></figure>
                 <div>
                     <p class="news-height">DEGITAL Tokyo 5月7日（火）〜5月10日（金）まで臨時休業とさせて頂きます。</p>
                     <p class="day">DATE: 2019.0.00</p>
@@ -62,7 +62,7 @@
             </li>
             <li><a href="">
                 <p class="category">PRESS</p>
-                <figure><img src="../img/news-02.jpg" alt=""></figure>
+                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../img/news-02.jpg" alt=""></figure>
                 <div>
                     <p class="news-height">D「VR 体験会」予約開始！。</p>
                     <p class="day">DATE: 2019.0.00</p>
@@ -70,7 +70,7 @@
             </li>
             <li><a href="">
                 <p class="category">PRESS</p>
-                <figure><img src="../img/news-03.jpg" alt=""></figure>
+                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../img/news-03.jpg" alt=""></figure>
                 <div>
                     <p class="news-height">DEGITAL Tokyo 5月7日（火）〜5月10日（金）まで臨時休業とさせて頂きます。</p>
                     <p class="day">DATE: 2019.0.00</p>
@@ -78,7 +78,7 @@
             </li>
             <li><a href="">
                 <p class="category">PRESS</p>
-                <figure><img src="../img/news-01.jpg" alt=""></figure>
+                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../img/news-01.jpg" alt=""></figure>
                 <div>
                     <p class="news-height">DEGITAL Tokyo 5月7日（火）〜5月10日（金）まで臨時休業とさせて頂きます。</p>
                     <p class="day">DATE: 2019.0.00</p>
@@ -86,7 +86,7 @@
             </li>
             <li><a href="">
                 <p class="category">PRESS</p>
-                <figure><img src="../img/news-02.jpg" alt=""></figure>
+                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../img/news-02.jpg" alt=""></figure>
                 <div>
                     <p class="news-height">D「VR 体験会」予約開始！。</p>
                     <p class="day">DATE: 2019.0.00</p>
@@ -94,7 +94,7 @@
             </li>
             <li><a href="">
                 <p class="category">PRESS</p>
-                <figure><img src="../img/news-03.jpg" alt=""></figure>
+                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../img/news-03.jpg" alt=""></figure>
                 <div>
                     <p class="news-height">DEGITAL Tokyo 5月7日（火）〜5月10日（金）まで臨時休業とさせて頂きます。</p>
                     <p class="day">DATE: 2019.0.00</p>
@@ -102,7 +102,7 @@
             </li>
             <li><a href="">
                 <p class="category">PRESS</p>
-                <figure><img src="../img/news-03.jpg" alt=""></figure>
+                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../img/news-03.jpg" alt=""></figure>
                 <div>
                     <p class="news-height">DEGITAL Tokyo 5月7日（火）〜5月10日（金）まで臨時休業とさせて頂きます。</p>
                     <p class="day">DATE: 2019.0.00</p>
@@ -110,7 +110,7 @@
             </li>
             <li><a href="">
                 <p class="category">PRESS</p>
-                <figure><img src="../img/news-01.jpg" alt=""></figure>
+                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../img/news-01.jpg" alt=""></figure>
                 <div>
                     <p class="news-height">DEGITAL Tokyo 5月7日（火）〜5月10日（金）まで臨時休業とさせて頂きます。</p>
                     <p class="day">DATE: 2019.0.00</p>
@@ -118,7 +118,7 @@
             </li>
             <li><a href="">
                 <p class="category">PRESS</p>
-                <figure><img src="../img/news-02.jpg" alt=""></figure>
+                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../img/news-02.jpg" alt=""></figure>
                 <div>
                     <p class="news-height">D「VR 体験会」予約開始！。</p>
                     <p class="day">DATE: 2019.0.00</p>
@@ -126,7 +126,7 @@
             </li>
             <li><a href="">
                 <p class="category">PRESS</p>
-                <figure><img src="../img/news-03.jpg" alt=""></figure>
+                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../img/news-03.jpg" alt=""></figure>
                 <div>
                     <p class="news-height">DEGITAL Tokyo 5月7日（火）〜5月10日（金）まで臨時休業とさせて頂きます。</p>
                     <p class="day">DATE: 2019.0.00</p>
@@ -134,7 +134,7 @@
             </li>
             <li><a href="">
                 <p class="category">PRESS</p>
-                <figure><img src="../img/news-03.jpg" alt=""></figure>
+                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../img/news-03.jpg" alt=""></figure>
                 <div>
                     <p class="news-height">DEGITAL Tokyo 5月7日（火）〜5月10日（金）まで臨時休業とさせて頂きます。</p>
                     <p class="day">DATE: 2019.0.00</p>
@@ -142,7 +142,7 @@
             </li>
             <li><a href="">
                 <p class="category">PRESS</p>
-                <figure><img src="../img/news-01.jpg" alt=""></figure>
+                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../img/news-01.jpg" alt=""></figure>
                 <div>
                     <p class="news-height">DEGITAL Tokyo 5月7日（火）〜5月10日（金）まで臨時休業とさせて頂きます。</p>
                     <p class="day">DATE: 2019.0.00</p>
@@ -150,7 +150,7 @@
             </li>
             <li><a href="">
                 <p class="category">PRESS</p>
-                <figure><img src="../img/news-02.jpg" alt=""></figure>
+                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../img/news-02.jpg" alt=""></figure>
                 <div>
                     <p class="news-height">D「VR 体験会」予約開始！。</p>
                     <p class="day">DATE: 2019.0.00</p>
@@ -158,7 +158,7 @@
             </li>
             <li><a href="">
                 <p class="category">PRESS</p>
-                <figure><img src="../img/news-03.jpg" alt=""></figure>
+                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../img/news-03.jpg" alt=""></figure>
                 <div>
                     <p class="news-height">DEGITAL Tokyo 5月7日（火）〜5月10日（金）まで臨時休業とさせて頂きます。</p>
                     <p class="day">DATE: 2019.0.00</p>
@@ -166,7 +166,7 @@
             </li>
             <li><a href="">
                 <p class="category">PRESS</p>
-                <figure><img src="../img/news-03.jpg" alt=""></figure>
+                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../img/news-03.jpg" alt=""></figure>
                 <div>
                     <p class="news-height">DEGITAL Tokyo 5月7日（火）〜5月10日（金）まで臨時休業とさせて頂きます。</p>
                     <p class="day">DATE: 2019.0.00</p>
@@ -175,7 +175,7 @@
         </ul>
     </section>
     <footer>
-        <h2><img src="../img/footer-logo.svg" alt=""></h2>
+        <h2><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../img/footer-logo.svg" alt=""></h2>
     </footer>
     <script src="../js/main.js"></script>
 </body>

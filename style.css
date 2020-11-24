@@ -1225,7 +1225,7 @@ header #navbtn {
   top: 150px;
   width: 49%;
   padding-bottom: 36%;
-  background-image: url(../img/bussiness@2x.jpg);
+  background-image: url(assets/img/bussiness@2x.jpg);
   background-position: center;
   background-size: cover;
   z-index: 2;
@@ -1404,7 +1404,7 @@ header #navbtn {
   width: 100%;
   padding: 18% 0;
   text-align: center;
-  background-image: url(../img/company.jpg);
+  background-image: url(assets/img/company.jpg);
   background-size: cover;
   color: #ffffff;
 }
@@ -1424,7 +1424,7 @@ header #navbtn {
 }
 
 .future_Area_link h2:last-child {
-  background-image: url(../img/recruit.jpg);
+  background-image: url(assets/img/recruit.jpg);
 }
 
 .future_Area_link h2 a {

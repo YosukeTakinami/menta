@@ -1,39 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://indestructibletype-fonthosting.github.io/renner.css" type="text/css" charset="utf-8" />
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <h1><img src="img/logo.svg" alt=""></h1>
-        <button type="button" id="navbtn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <div class="header-l">
-            <nav><a href="#"></a>
-                <ul id="navlist">
-                    <li><a href="#">NEWS</a></li><li><a href="#">ABOUT US</a></li><li><a href="#">BUSSINESS</a></li><li><a href="#">COMPANY</a></li><li><a href="#">RECRUIT</a></li>
-                </ul>
-            </nav>
-            <a href="#" class="header-l_btn">
-                <div class="waku"></div>
-                <dl>
-                    <dt><span><img src="img/dl.svg" alt=""></span>DOWNLOAD</dt>
-                    <dd>会社案内ダウンロード</dd>
-                </dl>
-            </a>
-        </div>
-    </header>
+<?php
+get_header();
+?>
     <section class="main">
-        <figure class="isPc"><img src="img/main.jpg" srcset="img/main.jpg 1x, img/main@2x.jpg 2x" alt=""></figure>
-        <figure class="isSp"><img src="img/main-sp.jpg" srcset="img/main-sp.jpg 1x, img/main-sp@2x.jpg 2x" alt=""></figure>
+        <figure class="isPc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/main.jpg" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/main.jpg 1x, <?php echo get_template_directory_uri(); ?>/assets/img/main@2x.jpg 2x" alt=""></figure>
+        <figure class="isSp"><img/main-sp.jpg" srcset="img/main-sp.jpg 1x, img/main-sp@2x.jpg 2x" alt=""></figure>
         <h2 data-aos="fade-up">New <span>Technology</span><br>
             for H<span>uman</span></h2>
         <div class="main_scroll isPc">
@@ -47,7 +17,7 @@
         <ul class="news-l wapper">
             <li><a href="">
                 <p class="category">PRESS</p>
-                <figure><img src="img/news-01.jpg" alt=""></figure>
+                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/img/news-01.jpg" alt=""></figure>
                 <div>
                     <p class="news-height">DEGITAL Tokyo 5月7日（火）〜5月10日（金）まで臨時休業とさせて頂きます。</p>
                     <p class="day">DATE: 2019.0.00</p>
@@ -55,7 +25,7 @@
             </li>
             <li><a href="">
                 <p class="category">PRESS</p>
-                <figure><img src="img/news-02.jpg" alt=""></figure>
+                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/img/news-02.jpg" alt=""></figure>
                 <div>
                     <p class="news-height">D「VR 体験会」予約開始！。</p>
                     <p class="day">DATE: 2019.0.00</p>
@@ -63,7 +33,7 @@
             </li>
             <li class="isPc"><a href="">
                 <p class="category">PRESS</p>
-                <figure><img src="img/news-03.jpg" alt=""></figure>
+                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/img/news-03.jpg" alt=""></figure>
                 <div>
                     <p class="news-height">DEGITAL Tokyo 5月7日（火）〜5月10日（金）まで臨時休業とさせて頂きます。</p>
                     <p class="day">DATE: 2019.0.00</p>
@@ -76,7 +46,7 @@
         </div>
     </section>
     <section class="about">
-        <figure><img src="img/about-img.jpg" srcset="img/about-img.jpg 1x, img/about-img@2x.jpg 2x" alt=""></figure>
+        <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-img.jpg" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/about-img.jpg 1x, <?php echo get_template_directory_uri(); ?>/assets/img/about-img@2x.jpg 2x" alt=""></figure>
         <div class="about_txt wapper">
             <h2 class="isPc">ABOUT US</h2>
             <dl>
@@ -91,7 +61,7 @@
                     <dt>MARKETING</dt>
                     <dd>デジタルマーケティング</dd>
                 </dl>
-                <figure><img src="img/marketing.jpg" srcset="img/marketing.jpg 1x, img/marketing@2x.jpg 2x" alt=""></figure>
+                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/img/marketing.jpg" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/marketing.jpg 1x, <?php echo get_template_directory_uri(); ?>/assets/img/marketing@2x.jpg 2x" alt=""></figure>
                 <p class="isPc">ここにテキストが入ります、<br>
                     ここにテキスト。</p>
             </li>
@@ -100,7 +70,7 @@
                     <dt>STRATEGY</dt>
                     <dd>ブランド戦略</dd>
                 </dl>
-                <figure><img src="img/strategy.jpg" srcset="img/strategy.jpg 1x, img/strategy@2x.jpg 2x" alt=""></figure>
+                <figure><img src="<?php echo get_template_directory_uri(); ?><?php echo get_template_directory_uri(); ?>/assets//assets/img/strategy.jpg" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/strategy.jpg 1x, <?php echo get_template_directory_uri(); ?>/assets/img/strategy@2x.jpg 2x" alt=""></figure>
                 <p class="isPc">ここにテキストが入ります、<br>
                     ここにテキスト。</p>
             </li>
@@ -109,7 +79,7 @@
                     <dt>PROMOTION</dt>
                     <dd>プロモーションの一貫性</dd>
                 </dl>
-                <figure><img src="img/promotion.jpg" srcset="img/promotion.jpg 1x, img/promotion@2x.jpg 2x" alt=""></figure>
+                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/img/promotion.jpg" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/promotion.jpg 1x, <?php echo get_template_directory_uri(); ?>/assets/img/promotion@2x.jpg 2x" alt=""></figure>
                 <p class="isPc">ここにテキストが入ります、<br>
                     ここにテキスト。</p>
             </li> 
@@ -149,21 +119,6 @@
             </dl>
         </div>
     </section>
-    <footer>
-        <h2><img src="img/footer-logo.svg" alt=""></h2>
-    </footer>
-    <script src="js/main.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-        offset: 120,
-        delay: 600,
-        duration: 300,
-        easing: 'ease',
-        once: false,
-        mirror: false,
-        anchorPlacement: 'top-bottom',
-    });
-    </script>
-</body>
-</html>
+    <?php
+    get_footer();
+?>
