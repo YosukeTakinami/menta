@@ -15,30 +15,24 @@ get_header();
     <section class="news">
         <h2 class="ttl wapper" data-aos="fade-up">NEWS</h2>
         <ul class="news-l wapper">
+        <?php
+                $blog_posts = get_posts(array(
+                    'post_type' => 'post', // 投稿タイプ
+                    'posts_per_page' => 3, // 表示件数
+                    'orderby' => 'date', // 表示順の基準
+                    'order' => 'DESC' // 昇順・降順
+                ));
+                global $post;
+                if($blog_posts): foreach($blog_posts as $post): setup_postdata($post); ?>
             <li><a href="">
-                <p class="category">PRESS</p>
-                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/img/news-01.jpg" alt=""></figure>
+                <p class="category"><?php $category = get_the_category(); $cat_name = $category[0]->cat_name; echo $cat_name; ?></p>
+                <figure><img src="<?php the_post_thumbnail(); ?>" alt=""></figure>
                 <div>
-                    <p class="news-height">DEGITAL Tokyo 5月7日（火）〜5月10日（金）まで臨時休業とさせて頂きます。</p>
-                    <p class="day">DATE: 2019.0.00</p>
+                    <p class="news-height"><?php the_content(); ?></p>
+                    <p class="day"><?php the_date(); ?></p>
                 </div></a>
             </li>
-            <li><a href="">
-                <p class="category">PRESS</p>
-                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/img/news-02.jpg" alt=""></figure>
-                <div>
-                    <p class="news-height">D「VR 体験会」予約開始！。</p>
-                    <p class="day">DATE: 2019.0.00</p>
-                </div></a>
-            </li>
-            <li class="isPc"><a href="">
-                <p class="category">PRESS</p>
-                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/img/news-03.jpg" alt=""></figure>
-                <div>
-                    <p class="news-height">DEGITAL Tokyo 5月7日（火）〜5月10日（金）まで臨時休業とさせて頂きます。</p>
-                    <p class="day">DATE: 2019.0.00</p>
-                </div></a>
-            </li>
+        <?php endforeach; endif; wp_reset_postdata(); ?>
         </ul>
         <div class="btnArea">
             <div class="waku"></div>
