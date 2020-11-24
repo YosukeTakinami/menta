@@ -415,7 +415,7 @@ header{
             figure{
                 margin-left: 0;
                 margin-bottom: 10px;
-                width: 90%;
+                width: 100%;
                 margin: 0 auto;
             }
             dl{
@@ -525,11 +525,9 @@ header{
                     dt{
                         font-size: 32px;
                         font-weight: bold;
-                        margin-bottom: 30px;
-                    }
-                    dd{
-                        line-height: 2;
-                        letter-spacing: 0;
+                        &:nth-child(2){
+                            margin-bottom: 30px;
+                        }
                     }
                 }
                 .btn{
