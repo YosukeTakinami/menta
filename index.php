@@ -24,19 +24,19 @@ get_header();
                 ));
                 global $post;
                 if($blog_posts): foreach($blog_posts as $post): setup_postdata($post); ?>
-            <li><a href="">
+            <li><a href="<?php the_permalink(); ?>">
                 <p class="category"><?php $category = get_the_category(); $cat_name = $category[0]->cat_name; echo $cat_name; ?></p>
-                <figure><img src="<?php the_post_thumbnail(); ?>" alt=""></figure>
+                <figure><img src="<?php echo get_the_post_thumbnail_url(); ?>" alt=""></figure>
                 <div>
                     <p class="news-height"><?php the_content(); ?></p>
-                    <p class="day"><?php the_date(); ?></p>
+                    <p class="day"><?php the_time('Y/m/d') ?></p>
                 </div></a>
             </li>
         <?php endforeach; endif; wp_reset_postdata(); ?>
         </ul>
         <div class="btnArea">
             <div class="waku"></div>
-            <a class="btn" href="#">NEWS LIST</a>
+            <a class="btn" href="/news">NEWS LIST</a>
         </div>
     </section>
     <section class="about">

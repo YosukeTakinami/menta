@@ -10,42 +10,36 @@ get_header();
     <section class="page-newsContents">
         <div class="page-newsContents_category">
             <div class="page-newsContents_category_day">
-                <p class="day">PRESS</p>
-                <p><time>2019/01/01</time></p>
+                <p class="day"><?php $category = get_the_category(); $cat_name = $category[0]->cat_name; echo $cat_name; ?></p>
+                <p><time><?php the_time('Y/m/d') ?></time></p>
             </div>
             <div class="page-newsContents_category_archive">
                 <p><a href="#"><span>NEWS</span>一覧に戻る</a></p>
                 <div class="waku"></div>
             </div>
         </div>
-        <h2>タイトル h1タイトル h1タイトル h1タイトル h1タイトル h1タイトル h1タイトル h1タイトル h1タイトル h1タイトル h1タイトル h1</h2>
-        <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../../img/news-detail.jpg" alt=""></figure>
-        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテ<br>
-        <br>
-        キストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        <h2><?php echo trim(wp_title('', false)); ?></h2>
+        <figure><img src="<?php echo get_the_post_thumbnail_url(); ?>" alt=""></figure>
+        <p><?php echo $cfs->get('mainTxt'); ?></p>
         <dl class="page-newsContents_table">
             <dt><span><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../../img/table-icon.svg" alt=""></span>目次</dt>
-            <dd>あああああああ</dd>
-            <dd>あああああああ</dd>
-            <dd>あああああああ</dd>
+            <?php
+                $fields = $cfs->get('tableloop'); //親ループ
+                foreach ($fields as $field) :
+                ?>
+                <dd><?php echo $field['tabletxt']; ?></dd>
+                <?php endforeach; ?>
         </dl>
-        <h3>H2の見出しですH2の見出しですH2の見出しですH2の見出しですH2の見出しです</h3>
-        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテ<br>
-        <br>
-        キストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-        <h4>H3の見出しですH3の見出しですH3の見出しですH3の見出しですH3の見出しですH3の見出しですH3の見出しですH3の見出しです</h4>
-        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテ<br>
-        <br>
-        キストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-        <h3>H2の見出しですH2の見出しですH2の見出しですH2の見出しですH2の見出しです</h3>
-        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテ<br>
-        <br>
-        キストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-        <h4>H3の見出しですH3の見出しですH3の見出しですH3の見出しですH3の見出しですH3の見出しですH3の見出しですH3の見出しです</h4>
-        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテ<br>
-        <br>
-        キストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-        <figure class="img02"><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../../img/news-detail02.jpg" alt=""></figure>
+        <?php
+            $fields = $cfs->get('txtArea'); //親ループ
+            foreach ($fields as $field) :
+            ?>        
+            <h3><?php echo $field['txtTitle']; ?></h3>
+            <p><?php echo $field['txt-txt']; ?></p>
+            <h4><?php echo $field['txtTitle02']; ?></h4>
+            <p><?php echo $field['txt-txt02']; ?></p>
+            <?php endforeach; ?>
+        <figure class="img02"><img src="<?php echo $field['news-img']; ?>"></figure>
         <ul class="listArea">
             <li>ああああああああああああああああああああああああああああああああああああ</li>
             <li>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</li>
