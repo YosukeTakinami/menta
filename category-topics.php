@@ -11,7 +11,7 @@ get_header();
         <div class="newsCategory_Area">
             <p><span><img src="<?php echo get_template_directory_uri(); ?>/assets/img/cate-icon.svg" alt=""></span>CATEGORY</p>
             <ul>
-            <li class="on"><a href="/news">ALL</a></li>
+            <li><a href="/news">ALL</a></li>
             <?php wp_list_categories('hide_empty=0&title_li='); ?>
             </ul>
         </div>
@@ -19,14 +19,21 @@ get_header();
     <section class="news pageNews">
         <ul class="news-l wapper">
         <?php
-                $blog_posts = get_posts(array(
-                    'post_type' => 'post', // 投稿タイプ
-                    'posts_per_page' => 12, // 表示件数
-                    'orderby' => 'date', // 表示順の基準
-                    'order' => 'DESC' // 昇順・降順
-                ));
-                global $post;
-                if($blog_posts): foreach($blog_posts as $post): setup_postdata($post); ?>
+                $cat = get_the_category();
+                $cat_name = $cat[0]->cat_name; // カテゴリー名
+                $cat_slug  = $cat[0]->category_nicename; // カテゴリースラッグ
+                $args = array(
+                    'post_type' => 'post', //投稿を表示
+                    'posts_per_page' => 12, //表示する件数
+                    'category_name' => 'topics', 
+                );
+                $the_query = new WP_Query( $args );
+                if ( $the_query->have_posts() ) :
+                ?>
+                <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                    <?php
+                    // 記事のカテゴリー情報を取得する
+                    ?>
             <li><a href="<?php the_permalink(); ?>">
                 <p class="category"><?php $category = get_the_category(); $cat_name = $category[0]->cat_name; echo $cat_name; ?></p>
                 <figure><img src="<?php the_post_thumbnail(); ?>" alt=""></figure>
@@ -35,13 +42,12 @@ get_header();
                     <p class="day"><?php the_time('Y/m/d') ?></p>
                 </div></a>
             </li>
-            <?php endforeach; endif; wp_reset_postdata(); ?>
+            <?php endwhile; ?>
+            <?php else: // no post ?>
+                <p>記事がありません。</p>
+            <?php endif; ?>
         </ul>
-        <?php
-    if( function_exists('pagenation') ){ // 関数が定義されていたらtrueになる
-        pagenation();
-    }?>
     </section>
-    <?php
+<?php
     get_footer();
 ?>

@@ -41,7 +41,7 @@ get_header();
     </section>
     <section class="about">
         <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-img.jpg" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/about-img.jpg 1x, <?php echo get_template_directory_uri(); ?>/assets/img/about-img@2x.jpg 2x" alt=""></figure>
-        <div class="about_txt wapper">
+        <div class="about_txt wapper" id="about">
             <h2 class="isPc">ABOUT US</h2>
             <dl>
                 <dt data-aos="fade-up">人のためのデジタル技術を<br class="isPc">この先もずっと</dt>
@@ -81,7 +81,7 @@ get_header();
     </section>
     <section class="bussiness">
         <div class="bussiness_Area">
-            <h2 class="isPc">BUSSINESS</h2>
+            <h2 class="isPc" id="bussiness">BUSSINESS</h2>
             <div class="bussiness_Area_box">
                 <div class="bussiness_Area_box_txt">
                     <dl>
@@ -101,7 +101,7 @@ get_header();
         <figure class="isPc"></figure>
     </section>
     <section class="future">
-        <div class="future_Area">
+        <div class="future_Area" id="company">
             <div class="future_Area_link">
                 <h2><a href="">Company</a></h2>
                 <h2><a href="">Recruit</a></h2>

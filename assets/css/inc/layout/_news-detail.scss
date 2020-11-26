@@ -120,8 +120,19 @@
         padding: 30px 20px;
         margin-bottom: 80px;
         li{
+            position: relative;
             font-size: 16px;
             margin-bottom: 20px;
+            padding-left: 20px;
+            &::before{
+                position: absolute;
+                content: "";
+                width: 9px;
+                height: 9px;
+                top: 8px;
+                left: -2px;
+                background: #E4E4E4;
+            }
             &:last-child{
                 margin-bottom: 0;
             }
@@ -250,7 +261,8 @@
                         border-right: 0;
                     }
                 }
-                p{
+                a{  
+                    display: block;
                     font-size: 14px;
                     font-family: $enfont;
                     font-weight: bold;

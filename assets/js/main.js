@@ -21,5 +21,3 @@ document.getElementById("navbtn").onclick = function(){
 }
 
 
-AOS.init({
-});

@@ -1066,6 +1066,8 @@ header #navbtn {
 .about_txt {
   position: relative;
   margin-bottom: 115px;
+  margin-top: -170px;
+  padding-top: 170px;
 }
 
 @media screen and (max-width: 768px) {
@@ -1275,6 +1277,8 @@ header #navbtn {
   font-family: "renner";
   font-weight: 500;
   letter-spacing: 0.02em;
+  margin-top: -121px;
+  padding-top: 121px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -1614,12 +1618,60 @@ footer h2 {
   margin-right: 0;
 }
 
+.newsCategory_Area ul .on, .newsCategory_Area ul .current-cat {
+  border-bottom: 2px solid #222222;
+  padding-bottom: 3px;
+}
+
 .pageNews::before {
   background: #ffffff;
 }
 
 .pageNews .news-l li {
   margin-bottom: 40px;
+}
+
+.m-pagenation__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.m-pagenation__body li {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "renner";
+  color: #A8041E;
+  margin-right: 20px;
+  position: relative;
+  border-bottom: 1px solid #F5F5F5;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.m-pagenation__body li:hover {
+  border-bottom: 1px solid #A8041E;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.m-pagenation__body li a {
+  display: block;
+  padding: 19px 25px;
+  background: #F5F5F5;
+}
+
+.m-pagenation__body .-current {
+  padding: 19px 25px;
+  background: #A8041E;
+  color: #ffffff;
+}
+
+.m-pagenation__body .-current:hover {
+  border-bottom: 1px solid #F5F5F5;
 }
 
 .page-newsContents {
@@ -1794,8 +1846,20 @@ footer h2 {
 }
 
 .page-newsContents .listArea li {
+  position: relative;
   font-size: 16px;
   margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.page-newsContents .listArea li::before {
+  position: absolute;
+  content: "";
+  width: 9px;
+  height: 9px;
+  top: 8px;
+  left: -2px;
+  background: #E4E4E4;
 }
 
 .page-newsContents .listArea li:last-child {
@@ -2000,7 +2064,8 @@ footer h2 {
   }
 }
 
-.page-newsContents_link_nb_box p {
+.page-newsContents_link_nb_box a {
+  display: block;
   font-size: 14px;
   font-family: "renner";
   font-weight: bold;

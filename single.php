@@ -14,7 +14,7 @@ get_header();
                 <p><time><?php the_time('Y/m/d') ?></time></p>
             </div>
             <div class="page-newsContents_category_archive">
-                <p><a href="#"><span>NEWS</span>一覧に戻る</a></p>
+                <p><a href=""><span>NEWS</span>一覧に戻る</a></p>
                 <div class="waku"></div>
             </div>
         </div>
@@ -22,54 +22,62 @@ get_header();
         <figure><img src="<?php echo get_the_post_thumbnail_url(); ?>" alt=""></figure>
         <p><?php echo $cfs->get('mainTxt'); ?></p>
         <dl class="page-newsContents_table">
-            <dt><span><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../../img/table-icon.svg" alt=""></span>目次</dt>
+            <dt><span><img src="<?php echo get_template_directory_uri(); ?>/assets/img/table-icon.svg" alt=""></span>目次</dt>
             <?php
                 $fields = $cfs->get('tableloop'); //親ループ
-                foreach ($fields as $field) :
+                foreach ((array)$fields as $field) :
                 ?>
                 <dd><?php echo $field['tabletxt']; ?></dd>
                 <?php endforeach; ?>
         </dl>
         <?php
             $fields = $cfs->get('txtArea'); //親ループ
-            foreach ($fields as $field) :
+            foreach ((array)$fields as $field) :
             ?>        
             <h3><?php echo $field['txtTitle']; ?></h3>
             <p><?php echo $field['txt-txt']; ?></p>
             <h4><?php echo $field['txtTitle02']; ?></h4>
             <p><?php echo $field['txt-txt02']; ?></p>
             <?php endforeach; ?>
-        <figure class="img02"><img src="<?php echo $field['news-img']; ?>"></figure>
+        <figure class="img02"><img src="<?php echo $cfs->get('newsimg'); ?>"></figure>
+        <?php
+            $fields = $cfs->get('news-list'); //親ループ
+            foreach ((array)$fields as $field) :
+        ?>
         <ul class="listArea">
-            <li>ああああああああああああああああああああああああああああああああああああ</li>
-            <li>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</li>
-            <li>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</li>
-        </ul>
-        <ul class="listArea">
-            <li>ああああああああああああああああああああああああああああああああああああ</li>
-            <li>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</li>
-            <li>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</li>
+        <?php
+            $fields = $field['news-list-area']; //子ループ
+            foreach ((array)$fields as $field):
+        ?>
+            <li><?php echo $field['news-list-area-txt']; ?></li>
+            <?php endforeach; ?>
+            <?php endforeach; ?>
         </ul>
         <div class="btnArea">
             <div class="waku"></div>
             <a class="btn btn02" href="#">テキスト</a>
         </div>
-        <p class="txt-link"><a href="">テキストリンクテキストリンクテキストリンクテキストリンクテキストリンクテキストリンクテキストリンクテキストリンクテキストリンクテキストリンクテキストリンクテキストリンクテキストリンクテキストリンクテキストリンクテキストリンク</a></p>
+        <p class="txt-link"><a href="<?php echo $cfs->get('link-link'); ?>"target="_blank" rel="noopener noreferrer"><?php echo $cfs->get('link-txt'); ?></a></p>
     </section>
     <section class="page-newsContents_sns">
         <div class="wapper">
             <p class="tag">#TAG</p>
             <ul>
-                <li>♯AAA</li><li>♯BBBB</li><li>♯CCCC</li>
+            <?php
+                $fields = $cfs->get('tagArea'); //親ループ
+                foreach ((array)$fields as $field) :
+            ?> 
+                <li><?php echo $field['tagArea-txt']; ?></li>
+                <?php endforeach; ?>
             </ul>
             <div class="page-newsContents_sns_Area">
-                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../../img/news-sns.jpg" alt=""></figure>
+                <figure><img src="<?php echo get_the_post_thumbnail_url(); ?>"></figure>
                 <div class="page-newsContents_sns_Area_link">
-                    <a href=""><dl>
+                    <a href="<?php echo $cfs->get('fb_link'); ?>" target="_blank" rel="noopener noreferrer"><dl>
                         <dt><i class="fab fa-facebook-f"></i>Facebook</dt>
                         <dd>この記事をシェアする</dd>
                     </dl></a>
-                    <a href=""><dl class="sns-border">
+                    <a href="<?php echo $cfs->get('tw_link'); ?>" target="_blank" rel="noopener noreferrer"><dl class="sns-border">
                         <dt><i class="fab fa-twitter"></i>Twitter</dt>
                         <dd>この記事をつぶやく</dd>
                     </dl></a>
@@ -80,21 +88,21 @@ get_header();
     <section class="page-newsContents_link">
         <div class="page-newsContents_link_nb">
             <div class="page-newsContents_link_nb_box">
-                <a href=""><p>PREV</p>
+            <?php previous_post_link('%link', 'PREV'); ?>
                 <dl>
                     <dt><time>2019/01/01</time></dt>
                     <dd>次の記事次の記事次の記事次の記事次の記事次の記事次の記事次の記事次の記事</dd>
                 </dl></a>
             </div>
             <div class="page-newsContents_link_nb_box">
-                <a href=""><p>NEXT</p>
+                <?php next_post_link('%link', 'NEXT'); ?>
                 <dl>
                     <dt><time>2019/01/01</time></dt>
                     <dd>次の記事次の記事次の記事次の記事次の記事次の記事次の記事次の記事次の記事</dd>
                 </dl></a>
             </div>
         </div>
-        <p class="listBtn"><a href="#">BACK TO LIST<span><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/../../img/list.svg" alt=""></span></a></p>
+        <p class="listBtn"><a href="/news">BACK TO LIST<span><img src="<?php echo get_template_directory_uri(); ?>/assets/img/list.svg" alt=""></span></a></p>
     </section>
     <?php
     get_footer();

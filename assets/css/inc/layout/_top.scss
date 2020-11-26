@@ -356,6 +356,8 @@ header{
     &_txt{
         position: relative;
         margin-bottom: 115px;
+        margin-top: -170px;
+        padding-top: 170px;
         @include mqsp {
             margin-bottom: 70px;     
         }
@@ -462,7 +464,7 @@ header{
         top: 150px;
         width: 49%;
         padding-bottom: 36%;
-        background-image: url(../../assets/img/bussiness@2x.jpg);
+        background-image: url(assets/img/bussiness@2x.jpg);
         background-position: center;
         background-size: cover;
         z-index: 2;
@@ -497,6 +499,8 @@ header{
             font-family: $enfont;
             font-weight: 500;
             letter-spacing: 0.02em;
+            margin-top: -121px;
+            padding-top: 121px;
             @media screen and (max-width: 1000px) {
                 font-size: (120/1280*100vw);
             }
@@ -577,7 +581,7 @@ header{
                 width: 100%;
                 padding: 18% 0;
                 text-align: center;
-                background-image: url(../img/company.jpg);
+                background-image: url(assets/img/company.jpg);
                 background-size: cover;
                 color: #ffffff;
                 @media screen and (max-width: 1000px) {
@@ -589,7 +593,7 @@ header{
                     height: 0;        
                 }
                 &:last-child{
-                    background-image: url(../img/recruit.jpg);
+                    background-image: url(assets/img/recruit.jpg);
                 }
                 a{
                     position: relative;
