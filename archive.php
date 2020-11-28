@@ -19,28 +19,29 @@ get_header();
     <section class="news pageNews">
         <ul class="news-l wapper">
         <?php
-                $blog_posts = get_posts(array(
-                    'post_type' => 'post', // 投稿タイプ
-                    'posts_per_page' => 12, // 表示件数
-                    'orderby' => 'date', // 表示順の基準
-                    'order' => 'DESC' // 昇順・降順
-                ));
-                global $post;
-                if($blog_posts): foreach($blog_posts as $post): setup_postdata($post); ?>
+            $args = array(
+                'paged' => $paged,
+                'post_type' => 'post',
+                'posts_per_page' => 12,
+            ); 
+            $my_query = new WP_Query($args);
+            if ($my_query->have_posts()) :
+            while ($my_query->have_posts()) : $my_query->the_post();?>
             <li><a href="<?php the_permalink(); ?>">
                 <p class="category"><?php $category = get_the_category(); $cat_name = $category[0]->cat_name; echo $cat_name; ?></p>
-                <figure><img src="<?php the_post_thumbnail(); ?>" alt=""></figure>
+                <figure><img src="<?php echo get_the_post_thumbnail_url(); ?>" alt=""></figure>
                 <div>
                     <p class="news-height"><?php the_content(); ?></p>
                     <p class="day"><?php the_time('Y/m/d') ?></p>
                 </div></a>
             </li>
-            <?php endforeach; endif; wp_reset_postdata(); ?>
+            <?php endwhile; ?>
         </ul>
+        <?php wp_reset_query();endif; ?>
         <?php
-    if( function_exists('pagenation') ){ // 関数が定義されていたらtrueになる
-        pagenation();
-    }?>
+            if( function_exists('pagenation') ){ // 関数が定義されていたらtrueになる
+                pagenation();
+        }?>
     </section>
     <?php
     get_footer();

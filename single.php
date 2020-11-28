@@ -14,7 +14,7 @@ get_header();
                 <p><time><?php the_time('Y/m/d') ?></time></p>
             </div>
             <div class="page-newsContents_category_archive">
-                <p><a href=""><span>NEWS</span>一覧に戻る</a></p>
+                <p><a href="/news"><span>NEWS</span>一覧に戻る</a></p>
                 <div class="waku"></div>
             </div>
         </div>
@@ -63,12 +63,12 @@ get_header();
         <div class="wapper">
             <p class="tag">#TAG</p>
             <ul>
-            <?php
-                $fields = $cfs->get('tagArea'); //親ループ
-                foreach ((array)$fields as $field) :
-            ?> 
-                <li><?php echo $field['tagArea-txt']; ?></li>
-                <?php endforeach; ?>
+                <?php
+                    $fields = $cfs->get('tagArea'); //親ループ
+                    foreach ((array)$fields as $field) :
+                ?> 
+                    <li><?php echo $field['tagArea-txt']; ?></li>
+                    <?php endforeach; ?>
             </ul>
             <div class="page-newsContents_sns_Area">
                 <figure><img src="<?php echo get_the_post_thumbnail_url(); ?>"></figure>
@@ -88,18 +88,30 @@ get_header();
     <section class="page-newsContents_link">
         <div class="page-newsContents_link_nb">
             <div class="page-newsContents_link_nb_box">
-            <?php previous_post_link('%link', 'PREV'); ?>
+            <?php if (get_next_post()):?>
+                <?php next_post_link('%link', 'PREV'); ?>
+            <? else: ?>
+            <a>記事がありません。</a>
+            <?php endif; ?>
                 <dl>
-                    <dt><time>2019/01/01</time></dt>
-                    <dd>次の記事次の記事次の記事次の記事次の記事次の記事次の記事次の記事次の記事</dd>
-                </dl></a>
+                <?php if( get_next_post()): ?>
+                    <dt><time><?php echo get_the_time('Y/m/d',get_next_post()->ID) ?></time></dt>
+                    <dd><?php echo get_the_title( get_next_post()->ID ); ?></dd>
+                <?php endif; ?>
+                </dl>
             </div>
             <div class="page-newsContents_link_nb_box">
-                <?php next_post_link('%link', 'NEXT'); ?>
+            <?php if (get_previous_post()):?>
+                <?php previous_post_link('%link', 'NEXT'); ?>
+            <? else: ?>
+            <a>記事がありません。</a>
+            <?php endif; ?>
                 <dl>
-                    <dt><time>2019/01/01</time></dt>
-                    <dd>次の記事次の記事次の記事次の記事次の記事次の記事次の記事次の記事次の記事</dd>
-                </dl></a>
+                <?php if( get_previous_post()): ?>
+                    <dt><time><?php echo get_the_time('Y/m/d',get_previous_post()->ID) ?></time></dt>
+                    <dd><?php echo get_the_title( get_previous_post()->ID ); ?></dd>
+                <?php endif; ?>
+                </dl>
             </div>
         </div>
         <p class="listBtn"><a href="/news">BACK TO LIST<span><img src="<?php echo get_template_directory_uri(); ?>/assets/img/list.svg" alt=""></span></a></p>

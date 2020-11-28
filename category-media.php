@@ -25,7 +25,7 @@ get_header();
                 $args = array(
                     'post_type' => 'post', //投稿を表示
                     'posts_per_page' => 12, //表示する件数
-                    'category_name' => $cat_slug, 
+                    'category_name' => 'media', 
                 );
                 $the_query = new WP_Query( $args );
                 if ( $the_query->have_posts() ) :
@@ -36,7 +36,7 @@ get_header();
                     ?>
             <li><a href="<?php the_permalink(); ?>">
                 <p class="category"><?php $category = get_the_category(); $cat_name = $category[0]->cat_name; echo $cat_name; ?></p>
-                <figure><img src="<?php the_post_thumbnail(); ?>" alt=""></figure>
+                <figure><img src="<?php echo get_the_post_thumbnail_url(); ?>" alt=""></figure>
                 <div>
                     <p class="news-height"><?php the_content(); ?></p>
                     <p class="day"><?php the_time('Y/m/d') ?></p>
@@ -44,7 +44,7 @@ get_header();
             </li>
             <?php endwhile; ?>
             <?php else: // no post ?>
-                
+                <p>記事がありません。</p>
             <?php endif; ?>
         </ul>
     </section>

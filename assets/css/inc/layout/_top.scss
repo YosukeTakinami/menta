@@ -87,7 +87,7 @@ header{
                         background: #A8041E;
                         transform: scale(0, 1);
                         transform-origin: right top;
-                        transition: transform .3s;
+                        transition: all .2s $easeInOutCirc;
                     }
                     &:hover::after{
                         transform-origin: left top;
@@ -275,7 +275,7 @@ header{
         &_bar{
             position: absolute;
             -webkit-animation: 2s arrow-animation infinite ease-in-out;
-            animation: 3.5s arrow-animation infinite ease-in-out;
+            animation: 3s arrow-animation infinite ease-in-out ;
             border: 4px solid #707070;
         }
         &_bar02{

@@ -321,6 +321,10 @@ svg {
   src: url(../common/font/renner__400_book-webfont.woff);
 }
 
+/*
+ * Easing function
+ * Original：http://easings.net/
+ */
 .ttl {
   font-size: 32px;
   font-family: "renner";
@@ -365,6 +369,10 @@ svg {
 @media screen and (max-width: 768px) {
   .news-l li {
     width: calc(357 / 754 * 100%);
+    margin-bottom: 20px;
+  }
+  .news-l li:last-child {
+    display: none;
   }
 }
 
@@ -410,6 +418,7 @@ svg {
 @media screen and (max-width: 768px) {
   .news-l div {
     margin-top: -5px;
+    padding: 15px 15px;
   }
 }
 
@@ -422,6 +431,7 @@ svg {
 @media screen and (max-width: 768px) {
   .news-l div p {
     font-size: 12px;
+    margin-bottom: 20px;
   }
 }
 
@@ -711,10 +721,8 @@ header .header-l nav li a::after {
           transform: scale(0, 1);
   -webkit-transform-origin: right top;
           transform-origin: right top;
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  -webkit-transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 header .header-l nav li a:hover::after {
@@ -953,7 +961,7 @@ header #navbtn {
 .main_scroll_bar {
   position: absolute;
   -webkit-animation: 2s arrow-animation infinite ease-in-out;
-  animation: 3.5s arrow-animation infinite ease-in-out;
+  animation: 3s arrow-animation infinite ease-in-out;
   border: 4px solid #707070;
 }
 
@@ -1631,6 +1639,10 @@ footer h2 {
   margin-bottom: 40px;
 }
 
+.pageNews .news-l li:last-child {
+  display: block;
+}
+
 .m-pagenation__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2031,6 +2043,7 @@ footer h2 {
 
 .page-newsContents_link_nb {
   max-width: 604px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2044,11 +2057,13 @@ footer h2 {
 
 .page-newsContents_link_nb_box {
   padding-right: 40px;
+  width: 41%;
 }
 
 @media screen and (max-width: 768px) {
   .page-newsContents_link_nb_box {
     padding-right: 20px;
+    width: 50%;
   }
 }
 

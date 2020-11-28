@@ -25,7 +25,7 @@ get_header();
                 $args = array(
                     'post_type' => 'post', //投稿を表示
                     'posts_per_page' => 12, //表示する件数
-                    'category_name' => $cat_slug, 
+                    'category_name' => 'press', 
                 );
                 $the_query = new WP_Query( $args );
                 if ( $the_query->have_posts() ) :
@@ -44,7 +44,7 @@ get_header();
             </li>
             <?php endwhile; ?>
             <?php else: // no post ?>
-                
+                <p>記事がありません。</p>
             <?php endif; ?>
         </ul>
     </section>

@@ -62,6 +62,9 @@
     .news-l{
         li{
             margin-bottom: 40px;
+            &:last-child{
+                display: block;
+            }
         }
     }
 }

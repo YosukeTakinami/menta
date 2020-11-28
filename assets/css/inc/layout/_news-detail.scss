@@ -244,14 +244,17 @@
         }
         &_nb{
             max-width: 604px;
+            width: 100%;
             display: flex;
             @include mqsp {
                 margin-bottom: 60px;
             }
             &_box{
                 padding-right: 40px;
+                width: 41%;
                 @include mqsp {
                     padding-right: 20px;
+                    width: 50%;
                 }
                 &:last-child{
                     padding-right: 60px;
